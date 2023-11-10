@@ -1,11 +1,10 @@
 @use 'reset';
-@use 'variables' as v;
+@import 'variables';
 
 * {
-  font-family: 'Bricolage Grotesque', sans-serif !important;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Bricolage Grotesque', sans-serif !important;
+  font-family: $main-font;
 }

@@ -2,13 +2,14 @@
 
 .Hero {
   height: 100dvh;
-  // min-height: 100%; A définir
+  min-height: 750px;
+  min-width: 950px;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 120px;
 
   &-section {
     width: 802px;
@@ -28,7 +29,6 @@
       padding: 40px;
 
       p {
-        line-height: 20px;
         padding-top: 1px;
       }
 
@@ -49,6 +49,7 @@
         &-name {
           font-size: 48px;
           margin-bottom: 100px;
+          text-transform: uppercase;
         }
 
         &-image {
@@ -71,12 +72,21 @@
     }
     &-right {
       width: 419px;
+
       .Pokemon {
         &-section {
           font-size: 40px;
           margin-bottom: 21px;
+
+          &:last-of-type {
+            margin-bottom: 22px;
+          }
         }
+
         &-attack {
+          display: flex;
+          justify-content: space-between;
+          line-height: 19px;
           font-size: 20px;
           font-weight: 700;
 
@@ -107,10 +117,11 @@
       margin-top: 40px;
     }
     &-line {
-      width: 100%;
+      width: calc(100% + 2px);
       height: 1px;
       background-color: $white-50;
-      margin: 40px 0 19px;
+      margin: 39px 0 19px;
+      transform: translateX(-1px);
     }
   }
 }

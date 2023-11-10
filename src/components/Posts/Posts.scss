@@ -1,0 +1,128 @@
+@import '../../styles/variables';
+
+.Posts {
+  background-color: $plaster;
+  background-image: linear-gradient(90deg, $noble-black-5 1px, transparent 1px),
+    linear-gradient($noble-black-5 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding-top: 100px;
+  color: $dynamic-black;
+  height: 1500px;
+
+  &-title {
+    width: 1161px;
+    margin: 0 auto;
+    font-size: 48px;
+    margin-bottom: 21px;
+  }
+  &-separator {
+    width: 1161px;
+    height: 1px;
+    margin: 0 auto 59px;
+    background-color: $dynamic-black;
+  }
+
+  .Post {
+    position: relative;
+    height: 301px;
+    min-width: 1161px;
+    margin-bottom: 59px;
+
+    &-container {
+      position: relative;
+      z-index: 1;
+      width: 880px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+
+      &-image {
+        position: relative;
+        width: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 205px;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: $dynamic-black;
+          z-index: 2;
+        }
+
+        &::before {
+          top: 0;
+          left: -20px;
+          width: 81px;
+          height: 1px;
+        }
+
+        &::after {
+          top: -20px;
+          left: 0px;
+          width: 1px;
+          height: 41px;
+        }
+      }
+
+      &-separator {
+        height: 221px;
+        width: 1px;
+        background-color: $dynamic-black;
+        margin-top: 40px;
+      }
+
+      &-infos {
+        position: relative;
+        width: 520px;
+        height: 100%;
+        padding: 80px 40px;
+
+        h3 {
+          font-size: 40px;
+          font-weight: 700;
+          margin-bottom: 22px;
+          text-transform: uppercase;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: $dynamic-black;
+          z-index: 2;
+        }
+
+        &::before {
+          bottom: 0;
+          right: -20px;
+          width: 81px;
+          height: 1px;
+        }
+
+        &::after {
+          bottom: -20px;
+          right: 0;
+          width: 1px;
+          height: 41px;
+        }
+      }
+    }
+
+    &-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 40%;
+    }
+  }
+}
