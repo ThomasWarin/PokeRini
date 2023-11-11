@@ -3,14 +3,86 @@ import bulbizarreBackground from './background/bulbizarre-background.png';
 import salamecheBackground from './background/salameche-background.png';
 import carapuceBackground from './background/carapuce-background.png';
 import osselaitBackground from './background/osselait-background.png';
+import noctaliBackground from './background/noctali-background.png';
+import phyllaliBackground from './background/phyllali-background.png';
+import pikachuBackground from './background/pikachu-background.png';
+import flambinoBackground from './background/flambino-background.png';
 
 // Import des pokémons
 import bulbizarre from './pokemon/bulbizarre.webp';
 import salameche from './pokemon/salameche.webp';
 import carapuce from './pokemon/carapuce.webp';
 import osselait from './pokemon/osselait.webp';
+import noctali from './pokemon/noctali.webp';
+import phyllali from './pokemon/phyllali.webp';
+import pikachu from './pokemon/pikachu.webp';
+import flambino from './pokemon/flambino.webp';
 
 export default [
+  {
+    id: 8,
+    background: phyllaliBackground,
+    pokemon: phyllali,
+    name: 'Phyllali',
+    description:
+      "Connu pour sa capacité à se fondre dans la nature et à utiliser l'énergie du soleil, Phyllali est un allié indispensable pour ceux qui cherchent l'harmonie avec l'environnement.",
+    attack1: ' Feuille de Laine ',
+    attack1Description:
+      "Les feuilles tricotées de Phyllali sont à la fois douces et tranchantes, surprenant l'adversaire avec leur précision.",
+    attack1PV: 30,
+    attack2: 'Soin Soyeux',
+    attack2Description:
+      'Retirez deux marqueurs de dégât de Phyllali. Les fibres naturelles de son corps apportent un réconfort et une guérison rapide.',
+    attack2PV: 0,
+  },
+  {
+    id: 7,
+    background: pikachuBackground,
+    pokemon: pikachu,
+    name: 'Pikachu',
+    description:
+      "Aussi nommé Grokachu, on raconte que ce Pikachu est tombé dans une marmite de baies lorsqu'il n'était qu'un Pichu.",
+    attack1: 'Étincelle Filée ',
+    attack1Description:
+      "L'électricité parcourt les fils de Pikachu, surprenant l'adversaire avec une attaque vive et pétillante.",
+    attack1PV: 30,
+    attack2: 'Queue Zigzag',
+    attack2Description:
+      'Si vous obtenez face, Pikachu esquive la prochaine attaque. Sa queue crochetée en zigzag lui donne une agilité inattendue.',
+    attack2PV: 10,
+  },
+  {
+    id: 6,
+    background: noctaliBackground,
+    pokemon: noctali,
+    name: 'Noctali',
+    description:
+      "En plus d'être un expert en furtivité et en attaques nocturnes, son caractère shiny en fait un allié précieux pour les dresseurs qui apprécient la rareté et la beauté.",
+    attack1: 'Regard Lunaire',
+    attack1Description:
+      "L'adversaire est maintenant confus. Les yeux étincelants de Noctali, accentués par des perles délicates, captivent et désorientent.",
+    attack1PV: 0,
+    attack2: 'Ombre de Laine',
+    attack2Description:
+      "Cette attaque passe à travers les défenses, reflétant la capacité de Noctali à se fondre dans l'obscurité.",
+    attack2PV: 20,
+  },
+  {
+    id: 5,
+    background: flambinoBackground,
+    pokemon: flambino,
+    name: 'Flambino',
+    description:
+      "Énergique et fier, il passe ses journées à s'entraîner au ballon et à améliorer ses compétences tactiques.",
+    attack1: 'Tir Crocheté',
+    attack1Description:
+      "Flambino lance une rafale rapide de projectiles enflammés surprenant l'adversaire par leur vitesse et leur précision.",
+    attack1PV: 30,
+    attack2: 'Feinte Laineuse',
+    attack2Description:
+      'Flambino utilise son agilité pour esquiver et contre-attaquer, tirant parti de sa structure en laine flexible pour des mouvements rapides et imprévisibles.',
+    attack2PV: 20,
+  },
   {
     id: 4,
     background: osselaitBackground,
