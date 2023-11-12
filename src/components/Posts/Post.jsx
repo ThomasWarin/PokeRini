@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 
 // Import de bibliothèque React
 import styled from 'styled-components';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// Import React
+import { useEffect } from 'react';
 
 // Gestion des couleurs dynamique avec StyledComponents
 const ColorDiv = styled.div`
@@ -64,8 +69,17 @@ function Post({
   color3,
   color4,
 }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="Post">
+    <div
+      className="Post"
+      data-aos="fade-up"
+      data-aos-offset="60"
+      data-aos-once="true"
+    >
       <div className="Post-container">
         <div className="Post-container-image">
           <img src={pokemon} alt={name} />
