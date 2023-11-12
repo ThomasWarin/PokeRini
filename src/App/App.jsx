@@ -1,6 +1,9 @@
 // Import du style
 import './App.scss';
 
+// Import de bibliothèque React
+import { ReactLenis } from '@studio-freight/react-lenis';
+
 // Import React
 import { useState } from 'react';
 import Hero from '../components/Hero/Hero';
@@ -28,15 +31,17 @@ function App() {
   const latestPokemons = initialPokemons.slice(1);
 
   return (
-    <div className="App">
-      <h1 className="App-title">POKÉRINI</h1>
-      <Hero {...heroPokemon} />
-      <Posts
-        pokemons={latestPokemons}
-        functionNextPokemons={handleNextPokemons}
-        totalPokemons={totalPokemons}
-      />
-    </div>
+    <ReactLenis root>
+      <div className="App">
+        <h1 className="App-title">POKÉRINI</h1>
+        <Hero {...heroPokemon} />
+        <Posts
+          pokemons={latestPokemons}
+          functionNextPokemons={handleNextPokemons}
+          totalPokemons={totalPokemons}
+        />
+      </div>
+    </ReactLenis>
   );
 }
 
