@@ -6,7 +6,10 @@ import './Posts.scss';
 // Import React
 import Post from './Post';
 
-function Posts({ pokemons }) {
+function Posts({ pokemons, functionNextPokemons, totalPokemons }) {
+  // Gestion de la disparition du bouton
+  const limitPokemons = pokemons.length === totalPokemons - 1;
+
   return (
     <div className="Posts">
       <section>
@@ -15,6 +18,15 @@ function Posts({ pokemons }) {
         {pokemons.map((item) => (
           <Post key={item.id} {...item} />
         ))}
+        {!limitPokemons && (
+          <button
+            className="Posts-button"
+            type="button"
+            onClick={functionNextPokemons}
+          >
+            Voir plus de Pokémons
+          </button>
+        )}
       </section>
     </div>
   );
