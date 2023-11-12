@@ -34,6 +34,9 @@ export default [
     attack2Description:
       'Retirez deux marqueurs de dégât de Phyllali. Les fibres naturelles de son corps apportent un réconfort et une guérison rapide.',
     attack2PV: 0,
+    color1: '#cbc8c0',
+    color2: '#668074',
+    color3: '#6b4e4d',
   },
   {
     id: 7,
@@ -50,6 +53,9 @@ export default [
     attack2Description:
       'Si vous obtenez face, Pikachu esquive la prochaine attaque. Sa queue crochetée en zigzag lui donne une agilité inattendue.',
     attack2PV: 10,
+    color1: '#f2d572',
+    color2: '#a11e40',
+    color3: '#2e3344',
   },
   {
     id: 6,
@@ -66,6 +72,8 @@ export default [
     attack2Description:
       "Cette attaque passe à travers les défenses, reflétant la capacité de Noctali à se fondre dans l'obscurité.",
     attack2PV: 20,
+    color1: '#1d71ab',
+    color2: '#37313d',
   },
   {
     id: 5,
@@ -82,6 +90,10 @@ export default [
     attack2Description:
       'Flambino utilise son agilité pour esquiver et contre-attaquer, tirant parti de sa structure en laine flexible pour des mouvements rapides et imprévisibles.',
     attack2PV: 20,
+    color1: '#f9f3f0',
+    color2: '#f6e5a6',
+    color3: '#dd8432',
+    color4: '#eb7536',
   },
   {
     id: 4,
@@ -98,6 +110,9 @@ export default [
     attack2Description:
       "Réduit les dégâts reçus de 20 lors du prochain tour. La douceur de sa laine absorbe l'impact.",
     attack2PV: 0,
+    color1: '#d9dbdd',
+    color2: '#a99b83',
+    color3: '#816766',
   },
   {
     id: 3,
@@ -114,6 +129,10 @@ export default [
     attack2Description:
       'Carapuce se recroqueville dans sa carapace douce, réduisant de 10 les dégâts des attaques reçues lors du prochain tour de votre adversaire.',
     attack2PV: 0,
+    color1: '#e1e5e6',
+    color2: '#bba58d',
+    color3: '#b79490',
+    color4: '#8cbcd1',
   },
   {
     id: 2,
@@ -130,6 +149,10 @@ export default [
     attack2Description:
       'Retirez un marqueur de dégât de Salamèche. La queue torsadée de Salamèche, crochetée avec soin, lui permet de récupérer rapidement.',
     attack2PV: 0,
+    color1: '#d1c3b4',
+    color2: '#cfa23a',
+    color3: '#fb794f',
+    color4: '#df4f56',
   },
   {
     id: 1,
@@ -146,5 +169,8 @@ export default [
     attack2Description:
       "Prévient tous les effets d'attaques, y compris les dégâts, infligés à Bulbizarre lors du prochain tour. La sérénité de son expression apaisante renforce ses défenses.",
     attack2PV: 0,
+    color1: '#85bcc5',
+    color2: '#416f78',
+    color3: '#4d6561',
   },
 ];
