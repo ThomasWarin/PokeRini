@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useMediaQuery } from 'react-responsive';
 
 // Import React
 import { useEffect } from 'react';
@@ -73,6 +74,9 @@ function Post({
     AOS.init();
   }, []);
 
+  const max750px = useMediaQuery({ query: '(max-width: 750px)' });
+  const max500px = useMediaQuery({ query: '(max-width: 500px)' });
+
   return (
     <div
       className="Post"
@@ -84,16 +88,18 @@ function Post({
         <div className="Post-container-image">
           <img src={pokemon} alt={name} />
         </div>
-        <div className="Post-container-separator" />
+        {!max500px && <div className="Post-container-separator" />}
         <div className="Post-container-infos">
           <h3>{name}</h3>
           <p>{description}</p>
-          <div className="Post-container-colors">
-            <ColorDiv color={color1} />
-            <ColorDiv color={color2} />
-            {color3 && <ColorDiv color={color3} />}
-            {color4 && <ColorDiv color={color4} />}
-          </div>
+          {!max750px && (
+            <div className="Post-container-colors">
+              <ColorDiv color={color1} />
+              <ColorDiv color={color2} />
+              {color3 && <ColorDiv color={color3} />}
+              {color4 && <ColorDiv color={color4} />}
+            </div>
+          )}
         </div>
       </div>
       <div

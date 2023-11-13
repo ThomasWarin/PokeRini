@@ -7,6 +7,10 @@
   &::after {
     font-family: $title-font;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {

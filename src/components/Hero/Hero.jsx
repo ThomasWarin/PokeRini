@@ -3,6 +3,9 @@
 // Import du style
 import './Hero.scss';
 
+// Import de bibliothèque React
+import { useMediaQuery } from 'react-responsive';
+
 // Import React
 import PropTypes from 'prop-types';
 
@@ -18,6 +21,10 @@ function Hero({
   attack1PV,
   attack2PV,
 }) {
+  const max1000px = useMediaQuery({ query: '(max-width: 1000px)' });
+  const max750px = useMediaQuery({ query: '(max-width: 750px)' });
+  const max500px = useMediaQuery({ query: '(max-width: 500px)' });
+
   return (
     <main className="Hero" style={{ backgroundImage: `url(${background})` }}>
       <section className="Hero-section">
@@ -25,22 +32,22 @@ function Hero({
           <h2 className="Pokemon-name">{name}</h2>
           <img className="Pokemon-image" src={pokemon} alt={name} />
         </div>
-        <div className="Hero-section-separator" />
+        {!max750px && <div className="Hero-section-separator" />}
         <div className="Hero-section-right">
           <h3 className="Pokemon-section">DESCRIPTION</h3>
           <p>{description}</p>
-          <div className="Hero-section-line" />
+          {!max1000px && <div className="Hero-section-line" />}
           <h3 className="Pokemon-section">ATTAQUES</h3>
           <div className="Pokemon-attack">
             <h4>{attack1}</h4>
             {attack1PV !== 0 && <span>{attack1PV}</span>}
           </div>
-          <p>{attack1Description}</p>
+          {!max500px && <p>{attack1Description}</p>}
           <div className="Pokemon-attack">
             <h4>{attack2}</h4>
             {attack2PV !== 0 && <span>{attack2PV}</span>}
           </div>
-          <p>{attack2Description}</p>
+          {!max500px && <p>{attack2Description}</p>}
         </div>
       </section>
     </main>
