@@ -5,17 +5,18 @@ import './Posts.scss';
 
 // Import React
 import Post from './Post';
+import Footer from '../Footer/Footer';
 
-function Posts({ pokemons, functionNextPokemons, totalPokemons }) {
+function Posts({ pokemonsDisplay, functionNextPokemons, totalPokemons }) {
   // Gestion de la disparition du bouton
-  const limitPokemons = pokemons.length === totalPokemons - 1;
+  const limitPokemons = pokemonsDisplay.length === totalPokemons - 1;
 
   return (
     <div className="Posts">
       <section>
         <h2 className="Posts-title">DERNIERS POKÉMONS</h2>
         <div className="Posts-separator" />
-        {pokemons.map((item) => (
+        {pokemonsDisplay.map((item) => (
           <Post key={item.id} {...item} />
         ))}
         {!limitPokemons && (
@@ -28,6 +29,7 @@ function Posts({ pokemons, functionNextPokemons, totalPokemons }) {
           </button>
         )}
       </section>
+      <Footer />
     </div>
   );
 }

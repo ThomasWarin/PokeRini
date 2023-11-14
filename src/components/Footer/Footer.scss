@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.Footer {
+  width: 1161px;
+  margin: 0px auto;
+  padding: 40px 0;
+
+  .copyright,
+  .anchor-top {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $dynamic-black;
+    font-family: $title-font;
+    line-height: 20px;
+  }
+
+  .anchor-top {
+    border: none;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    margin-top: -1px;
+  }
+
+  &-separator {
+    height: 1px;
+    background-color: $dynamic-black;
+    margin-bottom: 40px;
+  }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 881px;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 700px;
+  }
+  @media screen and (max-width: 750px) {
+    width: 440px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 330px;
+    padding: 20px 0 40px;
+
+    &-separator {
+      margin-bottom: 20px;
+    }
+  }
+}

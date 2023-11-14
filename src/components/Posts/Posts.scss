@@ -5,7 +5,7 @@
   background-image: linear-gradient(90deg, $noble-black-5 1px, transparent 1px),
     linear-gradient($noble-black-5 1px, transparent 1px);
   background-size: 20px 20px;
-  padding: 100px 0 59px;
+  padding-top: 100px;
   color: $dynamic-black;
 
   &-title {
@@ -29,7 +29,7 @@
     color: $dynamic-black;
     border: none;
     background-color: transparent;
-    line-height: 80px;
+    line-height: 78px;
     cursor: pointer;
     position: relative;
 
@@ -203,7 +203,7 @@
   }
 
   @media screen and (max-width: 750px) {
-    padding: 40px 0;
+    padding-top: 40px;
 
     &-title,
     &-separator {
@@ -251,7 +251,6 @@
   }
 
   @media screen and (max-width: 500px) {
-    padding: 20px 0;
     &-title,
     &-separator {
       width: 330px;
@@ -264,7 +263,6 @@
     }
     &-button {
       font-size: 24px;
-      line-height: 78px;
     }
 
     .Post {

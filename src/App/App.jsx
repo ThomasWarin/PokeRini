@@ -36,7 +36,7 @@ function App() {
         <h1 className="App-title">POKÉRINI</h1>
         <Hero {...heroPokemon} />
         <Posts
-          pokemons={latestPokemons}
+          pokemonsDisplay={latestPokemons}
           functionNextPokemons={handleNextPokemons}
           totalPokemons={totalPokemons}
         />
