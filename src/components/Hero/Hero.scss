@@ -244,7 +244,33 @@
         .Pokemon {
           &-section {
             font-size: 32px;
-            margin-bottom: 20px;
+            margin-bottom: 21px;
+          }
+
+          &-section:first-of-type,
+          &-attack {
+            cursor: pointer;
+          }
+
+          &-description,
+          &-attack-1,
+          &-attack-2 {
+            overflow: hidden;
+            transition: 0.3s;
+
+            &.active {
+              height: 60px;
+            }
+            &.inactive {
+              height: 0;
+            }
+          }
+
+          &-description.active {
+            height: 80px;
+            @media screen and (max-width: 390px) {
+              height: 100px;
+            }
           }
         }
       }
