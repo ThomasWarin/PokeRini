@@ -1,17 +1,35 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QX6NPNJBS0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-QX6NPNJBS0');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.png" />
     <title>PokéRini - Pokédex Crochet</title>
+    <meta
+      name="description"
+      content="Bienvenue sur PokéRini ! Plongez dans notre galerie de réalisations d'amigurumis faites au crochet où chaque Pokémon est recréé avec art et passion. Découvrez des idées originales et des techniques de crochet pour créer votre propre collection Pokémon. Parfait pour les fans de Pokémon et les amateurs de crochet à la recherche d'une touche créative et personnelle."
+    />
+
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
       href="https://fonts.bunny.net/css?family=philosopher:400,700|trochut:400,700"
       rel="stylesheet"
     />
   </head>
-  <body id="PokéRini">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

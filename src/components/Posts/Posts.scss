@@ -272,6 +272,7 @@
 
       &-container {
         width: calc(100vw - 40px);
+        justify-content: space-between;
 
         &-image {
           width: 79px;
