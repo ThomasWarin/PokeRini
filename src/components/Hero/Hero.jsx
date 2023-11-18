@@ -17,7 +17,7 @@ import { useState, useRef } from 'react';
 function Hero({
   background,
   name,
-  // pokemon,
+  url3D,
   description,
   attack1,
   attack2,
@@ -38,12 +38,12 @@ function Hero({
     pokeRef.current = splineApp;
     // Niveau de zoom en fonction de la taille de l'écran
     let zoomLevel = 1; // Zoom par défaut
-    if (max1000px) {
-      zoomLevel = 0.8;
+    if (max500px) {
+      zoomLevel = 0.5;
     } else if (max750px) {
       zoomLevel = 0.65;
-    } else if (max500px) {
-      zoomLevel = 0.5;
+    } else if (max1000px) {
+      zoomLevel = 0.8;
     }
     pokeRef.current.setZoom(zoomLevel);
   };
@@ -53,11 +53,7 @@ function Hero({
       <section className="Hero-section">
         <div className="Hero-section-left">
           <h2 className="Pokemon-name">{name}</h2>
-          <Spline
-            className="Pokemon-image"
-            scene="https://prod.spline.design/Nfgyk09HD05qGOLG/scene.splinecode"
-            onLoad={onLoad}
-          />
+          <Spline className="Pokemon-image" scene={url3D} onLoad={onLoad} />
 
           {/* <img className="Pokemon-image" src={pokemon} alt={name} /> */}
         </div>
@@ -115,7 +111,7 @@ function Hero({
 }
 
 Hero.propTypes = {
-  // pokemon: PropTypes.string.isRequired,
+  url3D: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   background: PropTypes.string.isRequired,

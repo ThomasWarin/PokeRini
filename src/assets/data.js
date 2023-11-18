@@ -22,6 +22,7 @@ export default [
   {
     id: 8,
     background: phyllaliBackground,
+    url3D: 'https://prod.spline.design/Nfgyk09HD05qGOLG/scene.splinecode',
     pokemon: phyllali,
     name: 'Phyllali',
     description:
