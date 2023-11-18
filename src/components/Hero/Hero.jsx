@@ -18,6 +18,7 @@ function Hero({
   background,
   name,
   url3D,
+  pokemon,
   description,
   attack1,
   attack2,
@@ -31,6 +32,7 @@ function Hero({
   const max500px = useMediaQuery({ query: '(max-width: 500px)' });
 
   const [blockVisible, setBlockVisible] = useState('description');
+  const [is3DEnabled, setIs3DEnabled] = useState(false);
 
   // Gestion du zoom du Poké3D pour le responsive
   const pokeRef = useRef();
@@ -41,7 +43,7 @@ function Hero({
     if (max500px) {
       zoomLevel = 0.5;
     } else if (max750px) {
-      zoomLevel = 0.65;
+      zoomLevel = 0.6;
     } else if (max1000px) {
       zoomLevel = 0.8;
     }
@@ -52,10 +54,22 @@ function Hero({
     <main className="Hero" style={{ backgroundImage: `url(${background})` }}>
       <section className="Hero-section">
         <div className="Hero-section-left">
-          <h2 className="Pokemon-name">{name}</h2>
-          <Spline className="Pokemon-image" scene={url3D} onLoad={onLoad} />
+          <h2 className="Pokemon-name">
+            {name}
+            <span
+              className={`Pokemon-toggle3D ${is3DEnabled ? 'active' : ''}`}
+              onClick={() => setIs3DEnabled(!is3DEnabled)}
+            >
+              3D
+            </span>
+          </h2>
 
-          {/* <img className="Pokemon-image" src={pokemon} alt={name} /> */}
+          {is3DEnabled && (
+            <Spline className="Pokemon-3d" scene={url3D} onLoad={onLoad} />
+          )}
+          {!is3DEnabled && (
+            <img className="Pokemon-image" src={pokemon} alt={name} />
+          )}
         </div>
 
         {!max750px && <div className="Hero-section-separator" />}
@@ -112,6 +126,7 @@ function Hero({
 
 Hero.propTypes = {
   url3D: PropTypes.string.isRequired,
+  pokemon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   background: PropTypes.string.isRequired,

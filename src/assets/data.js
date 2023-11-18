@@ -164,7 +164,7 @@ export default [
       "Reconnaissable à sa peau tachetée et à son bulbe, cette peluche stocke l'énergie solaire pour ses attaques.",
     attack1: 'Vrille Chlorophylle',
     attack1Description:
-      "Lancez une pièce. Paralyse l'adversaire si vous obtenez face. Les lianes de Bulbizarre, tricotées avec une laine verte éclatante, s'enroulent avec une précision étonnante.",
+      "Lancez une pièce. Paralyse l'adversaire si vous obtenez face. Les lianes tricotées de Bulbizarre s'enroulent avec une précision étonnante.",
     attack1PV: 10,
     attack2: 'Douce Sérénité',
     attack2Description:
