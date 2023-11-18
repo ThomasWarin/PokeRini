@@ -8,15 +8,16 @@ import './Hero.scss';
 
 // Import de bibliothèque React
 import { useMediaQuery } from 'react-responsive';
+import Spline from '@splinetool/react-spline';
 
 // Import React
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 function Hero({
   background,
   name,
-  pokemon,
+  // pokemon,
   description,
   attack1,
   attack2,
@@ -27,15 +28,38 @@ function Hero({
 }) {
   const max1000px = useMediaQuery({ query: '(max-width: 1000px)' });
   const max750px = useMediaQuery({ query: '(max-width: 750px)' });
+  const max500px = useMediaQuery({ query: '(max-width: 500px)' });
 
   const [blockVisible, setBlockVisible] = useState('description');
+
+  // Gestion du zoom du Poké3D pour le responsive
+  const pokeRef = useRef();
+  const onLoad = (splineApp) => {
+    pokeRef.current = splineApp;
+    // Niveau de zoom en fonction de la taille de l'écran
+    let zoomLevel = 1; // Zoom par défaut
+    if (max1000px) {
+      zoomLevel = 0.8;
+    } else if (max750px) {
+      zoomLevel = 0.65;
+    } else if (max500px) {
+      zoomLevel = 0.5;
+    }
+    pokeRef.current.setZoom(zoomLevel);
+  };
 
   return (
     <main className="Hero" style={{ backgroundImage: `url(${background})` }}>
       <section className="Hero-section">
         <div className="Hero-section-left">
           <h2 className="Pokemon-name">{name}</h2>
-          <img className="Pokemon-image" src={pokemon} alt={name} />
+          <Spline
+            className="Pokemon-image"
+            scene="https://prod.spline.design/Nfgyk09HD05qGOLG/scene.splinecode"
+            onLoad={onLoad}
+          />
+
+          {/* <img className="Pokemon-image" src={pokemon} alt={name} /> */}
         </div>
 
         {!max750px && <div className="Hero-section-separator" />}
@@ -91,7 +115,7 @@ function Hero({
 }
 
 Hero.propTypes = {
-  pokemon: PropTypes.string.isRequired,
+  // pokemon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   background: PropTypes.string.isRequired,
