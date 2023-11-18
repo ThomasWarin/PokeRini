@@ -89,28 +89,6 @@
               left: 28px;
             }
           }
-
-          @media (hover: hover) {
-            &:not(.active):hover {
-              opacity: 1;
-
-              &::before {
-                width: 0;
-                top: -4px;
-                left: 28px;
-              }
-            }
-
-            &.active:hover {
-              opacity: 0.5;
-
-              &::before {
-                width: 30px;
-                top: 9px;
-                left: 6px;
-              }
-            }
-          }
         }
         &-image {
           height: 240px;

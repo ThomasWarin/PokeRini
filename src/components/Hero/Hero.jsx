@@ -57,7 +57,7 @@ function Hero({
           <h2 className="Pokemon-name">
             {name}
             <span
-              className={`Pokemon-toggle3D ${is3DEnabled ? 'active' : ''}`}
+              className={`Pokemon-toggle3D ${!is3DEnabled ? 'active' : ''}`}
               onClick={() => setIs3DEnabled(!is3DEnabled)}
             >
               3D
