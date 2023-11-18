@@ -27,10 +27,12 @@ function Hero({
   attack1PV,
   attack2PV,
 }) {
+  // Gestion du Responsive
   const max1000px = useMediaQuery({ query: '(max-width: 1000px)' });
   const max750px = useMediaQuery({ query: '(max-width: 750px)' });
   const max500px = useMediaQuery({ query: '(max-width: 500px)' });
 
+  // Gestion des States
   const [blockVisible, setBlockVisible] = useState('description');
   const [is3DEnabled, setIs3DEnabled] = useState(false);
 
@@ -53,23 +55,24 @@ function Hero({
   return (
     <main className="Hero" style={{ backgroundImage: `url(${background})` }}>
       <section className="Hero-section">
-        <div className="Hero-section-left">
+        <div
+          // prettier-ignore
+          className={`Hero-section-left ${!is3DEnabled ? 'Spline-inactive' : ''}`}
+        >
           <h2 className="Pokemon-name">
             {name}
             <span
-              className={`Pokemon-toggle3D ${!is3DEnabled ? 'active' : ''}`}
+              className={`Pokemon-toggle3D ${is3DEnabled ? 'active' : ''}`}
               onClick={() => setIs3DEnabled(!is3DEnabled)}
             >
               3D
             </span>
           </h2>
 
-          {is3DEnabled && (
-            <Spline className="Pokemon-3d" scene={url3D} onLoad={onLoad} />
-          )}
           {!is3DEnabled && (
             <img className="Pokemon-image" src={pokemon} alt={name} />
           )}
+          <Spline className="Pokemon-3d" scene={url3D} onLoad={onLoad} />
         </div>
 
         {!max750px && <div className="Hero-section-separator" />}
