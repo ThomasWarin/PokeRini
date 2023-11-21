@@ -7,6 +7,7 @@ import noctaliBackground from './background/noctali-background.webp';
 import phyllaliBackground from './background/phyllali-background.webp';
 import pikachuBackground from './background/pikachu-background.webp';
 import flambinoBackground from './background/flambino-background.webp';
+import aqualiBackground from './background/aquali-background.webp';
 
 // Import des pokémons
 import bulbizarre from './pokemon/bulbizarre.webp';
@@ -17,8 +18,30 @@ import noctali from './pokemon/noctali.webp';
 import phyllali from './pokemon/phyllali.webp';
 import pikachu from './pokemon/pikachu.webp';
 import flambino from './pokemon/flambino.webp';
+import aquali from './pokemon/aquali.webp';
 
 export default [
+  {
+    id: 9,
+    background: aqualiBackground,
+    url3D: 'https://prod.spline.design/wc4NF8wnUQio1CH3/scene.splinecode',
+    pokemon: aquali,
+    name: 'Aquali',
+    description:
+      "Ce petit compagnon au crochet navigue avec grâce au rythme des vagues. Il est capable de manipuler l'eau pour créer des petits tourbillons.",
+    attack1: 'Vague Crochetée',
+    attack1Description:
+      "Cette attaque envoie une puissante vague d'eau, élégamment tissée, capable de submerger l'adversaire avec la force tranquille d'un océan.",
+    attack1PV: 30,
+    attack2: 'Bulle de Sérénité',
+    attack2Description:
+      "Aquali crée une bulle protectrice de fils doux et empêche 20 dégâts lors de la prochaine attaque de l'adversaire.",
+    attack2PV: 0,
+    color1: '#e5e8eb',
+    color2: '#cdbaa2',
+    color3: '#9dcece',
+    color4: '#405482',
+  },
   {
     id: 8,
     background: phyllaliBackground,
@@ -27,7 +50,7 @@ export default [
     name: 'Phyllali',
     description:
       "Connu pour sa capacité à se fondre dans la nature et à utiliser l'énergie du soleil, Phyllali est un allié indispensable pour ceux qui cherchent l'harmonie avec l'environnement.",
-    attack1: ' Feuille de Laine ',
+    attack1: 'Feuille de Laine',
     attack1Description:
       "Les feuilles tricotées de Phyllali sont à la fois douces et tranchantes, surprenant l'adversaire avec leur précision.",
     attack1PV: 30,
@@ -46,7 +69,7 @@ export default [
     name: 'Pikachu',
     description:
       "Aussi nommé Grokachu, on raconte que ce Pikachu est tombé dans une marmite de baies lorsqu'il n'était qu'un Pichu.",
-    attack1: 'Étincelle Filée ',
+    attack1: 'Étincelle Filée',
     attack1Description:
       "L'électricité parcourt les fils de Pikachu, surprenant l'adversaire avec une attaque vive et pétillante.",
     attack1PV: 30,
