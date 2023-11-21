@@ -44,9 +44,10 @@
     &-left {
       width: 380px;
       text-align: center;
+      overflow: hidden;
 
       &.Spline-inactive .Pokemon-3d {
-        display: none;
+        visibility: hidden;
       }
 
       .Pokemon {
@@ -182,7 +183,6 @@
       &-left {
         width: 280px;
         padding: 40px 0;
-
 
         .Pokemon {
           &-name {
